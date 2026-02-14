@@ -89,7 +89,7 @@ vector<Track> readCSV(const string& filename) {
         getline(ss, token, ';'); int q = stoi(token);
 
         // Добавление в вектор
-        data.emplace_back(id, title, artist, genre, min, sec, q);
+        data.push_back(Track(id, title, artist, genre, min, sec, q));
     }
     return data;
 }
@@ -112,3 +112,4 @@ int main() {
 
     return 0;
 }
+
